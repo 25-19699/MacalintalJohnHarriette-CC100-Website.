@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harriette's Web Page</title>
+    
+    <link rel="style.css" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f5e9d3;
+        }
+
+        header {
+            background: linear-gradient(to right, #00132c, #003b7a);
+            color: white;
+            padding: 25px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        h2 {
+            color: black;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .accordion-label {
+            width: 90%;
+            margin: 10px auto;
+            padding: 15px;
+            background: linear-gradient(to right, #000000, #001f4d);
+            border: none;
+            border-radius: 12px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            color: white;
+            transition: 0.3s;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+            display: block;
+            text-align: center;
+        }
+
+        .accordion-label:hover {
+            transform: scale(1.03);
+            background: linear-gradient(to right, #0a0a0a, #003080);
+        }
+
+        input[type="checkbox"] {
+            display: none;
+        }
+
+        .panel {
+            width: 90%;
+            background: white;
+            margin: 0 auto;
+            max-height: 0;
+            overflow: hidden;
+            border-radius: 12px;
+            padding: 0 15px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+            transition: max-height 0.4s ease-in-out;
+        }
+
+
+        input[type="checkbox"]:checked + .accordion-label + .panel {
+            max-height: 800px;
+            padding: 15px;
+        }
+
+        .panel p {
+            font-size: 16px;
+            line-height: 1.7;
+            margin: 10px 0;
+        }
+
+        .panel ul {
+            margin: 10px 0 10px 20px;
+        }
+
+        .panel li {
+            margin-bottom: 5px;
+        }
+
+        .gallery img {
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 3px solid black;
+            display: block;
+            margin: 0 auto;
+        }
+
+        footer {
+            margin-top: 40px;
+            background: #1c1c1c;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>Welcome to Harriette's Portfolio</header>
+
+<section id="picture">
+    <h2>Picture</h2>
+    <div class="gallery">
+        <img src="hariette.jpeg" alt="My Picture">
+    </div>
+</section>
+
+<input type="checkbox" id="about">
+<label for="about" class="accordion-label">About Me</label>
+<div class="panel">
+    <p>Hello! My name is John Harriette Macalintal, I am 18 years old and currently studying at BatStateU Balayan Campus.</p>
+    <p>I am a friendly, determined, and goal-oriented individual who enjoys learning new things, exploring creative ideas, and challenging myself to grow both personally and academically.</p>
+    <p>In my free time, I enjoy bonding with family and friends, improving my skills in editing and drawing, and discovering new hobbies or interests.</p>
+</div>
+
+<input type="checkbox" id="hobby">
+<label for="hobby" class="accordion-label">Hobby</label>
+<div class="panel">
+    <p>I have several hobbies that help me relax after schoolwork:</p>
+    <ul>
+        <li><strong>Editing (Canva)</strong></li>
+        <li><strong>Playing Online Games</strong></li>
+        <li><strong>Drawing (Poster)</strong></li>
+    </ul>
+</div>
+
+<input type="checkbox" id="education">
+<label for="education" class="accordion-label">Educational Background</label>
+<div class="panel">
+    <p>A summary of my educational journey:</p>
+    <ul>
+        <li><strong>Gulod Elementary School</strong></li>
+        <li><strong>Governor Feliciano Leviste Memorial National High School</strong></li>
+        <li><strong>Lemery Senior High School</strong></li>
+    </ul>
+</div>
+
+<input type="checkbox" id="contact">
+<label for="contact" class="accordion-label">Contact</label>
+<div class="panel">
+    <p>You can reach me through the following channels:</p>
+    <ul>
+        <li><strong>Email:</strong> <a href="mailto:johnharriettem@gmail.com">johnharriettem@gmail.com</a></li>
+        <li><strong>Phone:</strong> 09350676834</li>
+        <li><strong>Facebook:</strong> <a href="https://facebook.com" target="_blank">John Harriette Macalintal</a></li>
+    </ul>
+</div>
+
+<footer>&copy; 2025 John Harriette A. Macalintal</footer>
+
+</body>
+</html>
